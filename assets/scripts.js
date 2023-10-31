@@ -2,6 +2,7 @@ let nameInput = document.getElementById('name')
 let emailInput = document.getElementById('email')
 let numberInput = document.getElementById('number')
 let numberRepeatInput = document.getElementById('number-repeat')
+let messageReturn = document.getElementById('message-return')
 
 
 nameInput.addEventListener('keypress',function(e){
@@ -62,8 +63,16 @@ function send(){
 
         localStorage.setItem('infos', JSON.stringify(infos))
 
+        messageReturn.style.display='block'
+        messageReturn.innerText = 'Success'
+        messageReturn.classList.add('send-success')
+        messageReturn.classList.remove('send-error')
+
     }else{
-        alert('Fill in the fields correctly')
+        messageReturn.classList.remove('send-success')
+        messageReturn.style.display='block'
+        messageReturn.innerText = 'Fill in the fields correctly'
+        messageReturn.classList.add('send-error')
     }
 
 }

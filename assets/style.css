@@ -13,7 +13,7 @@ body{
 }
 section{
     background-color: rgb(100, 100, 100);
-    width: 500px;
+    max-width: 500px;
     height: 500px;
     margin: 100px auto;
     padding: 30px;
@@ -24,6 +24,21 @@ section{
     font-size: 40px;
     text-align: center;
     margin: 10px;
+}
+#message-return{
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    display: none;
+}
+.send-success{
+    background-color: rgba(106, 214, 106, 0.733);
+    color: rgb(6, 63, 6);
+}
+.send-error{
+    background-color: rgb(233, 103, 103);
+    color: rgb(114, 13, 13);
 }
 .data{
     margin: auto;
